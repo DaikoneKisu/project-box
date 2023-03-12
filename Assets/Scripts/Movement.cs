@@ -26,14 +26,9 @@ public class Movement : MonoBehaviour
             rbody.AddForce(Vector2.left * forceMagnitude);
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            rbody.AddTorque(forceMagnitude);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            rbody.AddTorque(-forceMagnitude);
+            rbody.AddForce(Vector2.up * 300*forceMagnitude);
         }
     }
 }
